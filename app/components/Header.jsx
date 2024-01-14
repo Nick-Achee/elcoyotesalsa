@@ -31,7 +31,7 @@ export function Header({header, isLoggedIn, cart}) {
  */
 export function HeaderMenu({menu, primaryDomainUrl, viewport}) {
   const {publicStoreDomain} = useRootLoaderData();
-  const className = `header-menu-${viewport}`;
+  const className = `header-menu-${viewport} bg-gray-100`;
 
   function closeAside(event) {
     if (viewport === 'mobile') {
