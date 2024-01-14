@@ -129,13 +129,36 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: linear-gradient(135deg, #fff, #333); /* Subtle gradient */
   display: flex;
   height: var(--header-height);
-  padding: 0 1rem;
+  padding: 0 2rem; /* Responsive padding */
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+
+  /* Typography */
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  /* Responsive Design: Adjust for smaller screens */
+  @media (max-width: 600px) {
+    padding: 0 1rem;
+  }
+}
+
+/* Hover Effects for Interactive Elements */
+.header a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ddd;
+  }
 }
 
 .header-menu-mobile-toggle {

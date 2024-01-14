@@ -64,6 +64,7 @@ function FeaturedCollection({collection}) {
 function RecommendedProducts({products}) {
   return (
     <div className="recommended-products">
+      <div className="w-screen h-screen bg-black">Hello</div>
       <h2>Recommended Products</h2>
       <Suspense fallback={<div>Loading...</div>}>
         <Await resolve={products}>
@@ -77,6 +78,7 @@ function RecommendedProducts({products}) {
                 >
                   <Image
                     data={product.images.nodes[0]}
+                    className="rounded-lg shadow-md hover:shadow-lg"
                     aspectRatio="1/1"
                     sizes="(min-width: 45em) 20vw, 50vw"
                   />
